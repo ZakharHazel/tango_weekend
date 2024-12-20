@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+  <main>
+      <div class="col-md-12">
+        <h4 class="mb-3">Мероприятие</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-12">
+              <label for="name" class="form-label">Название</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="col-sm-4">
+              <label for="date_start" class="form-label">Дата начала</label>
+              <input type="date" class="form-control" id="date_start">
+            </div>
+            <div class="col-sm-4">
+              <label for="date_end" class="form-label">Дата окончания</label>
+              <input type="date" class="form-control" id="date_end">
+            </div>
+            <div class="col-sm-4">
+              <label for="date_start_registr" class="form-label">Дата начала регистрации</label>
+              <input type="date" class="form-control" id="date_start_registr">
+            </div>
+            <div class="col-sm-4">
+              <label for="date_up_price" class="form-label">Дата повышения цен</label>
+              <input type="date" class="form-control" id="date_up_price">
+            </div>
+            <div class="col-sm-4">
+              <label for="date_refund_half" class="form-label">Дата возврата 50%</label>
+              <input type="date" class="form-control" id="date_refund_half">
+            </div>
+            <div class="col-sm-4">
+              <label for="date_refund_lack" class="form-label">Дата невозврата</label>
+              <input type="date" class="form-control" id="date_refund_lack">
+            </div>
+            <hr class="my-4">
+
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Добавить мероприятие</button>
+            <hr class="my-4">
+            <h4 class="mb-3">Пакеты</h4>
+            <table class="table table-hover">
+              <thead>
+              <tr>
+                <th scope="col">Название</th>
+                <th scope="col">Льготная цена</th>
+                <th scope="col">Цена</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <a href="/event/{{ id }}/info">Масленица</a>
+                </td>
+                <td>
+                  1000
+                </td>
+                <td>
+                  5000
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                   <button class="w-100 btn btn-primary btn-lg" type="submit">Добавить пакет</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+      </div>
+  </main>
+</div>
+
+{% endblock %}
